@@ -1,12 +1,14 @@
-var getRepos = require.('./../js/github.js').getRepos;
-var githubKey = require('./../.env').githubKey;
-// exports.username = user;
+var apiKey = require('./../.env').apiKey;
+var getUsername = require('./../js/git-interface.js').getUsername;
+var getRepos = require('./../js/git-interface.js').getRepos;
 
 $(document).ready(function() {
-  ('#repoInfo').click(function() {
-    var user = $('#usernameRepos').val();
-    $('#usernameRepos').val("");
-    .show('#showRepos');
-
+ $('#find-git').submit(function(event) {
+   event.preventDefault();
+   var username = $('#username').val();
+   getUsername();
+   getRepos();
+   $('.username-results').empty();
+   $('.repo-results').empty();
   });
 });
