@@ -1,5 +1,5 @@
 {
-  "name": "javascript-skeleton",
+  "name": "githubapi-jswk1-reivew",
   "version": "1.0.0",
   "description": "template",
   "main": "gulpfile.js",
@@ -24,5 +24,13 @@
   },
   "dependencies": {
     "del": "^2.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charcar/jswk1-review-githubapi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/charcar/jswk1-review-githubapi/issues"
+  },
+  "homepage": "https://github.com/charcar/jswk1-review-githubapi#readme"
 }
