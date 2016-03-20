@@ -1,4 +1,3 @@
-
 var apiKey = require('./../.env').apiKey;
 
 exports.getUsername = function(){
@@ -10,10 +9,6 @@ exports.getUsername = function(){
     if(response.name != null) {
       $('.username-results').append('<strong><p>Name: </strong>' + response.name + '</p>');
     };
-    if(response.email != null) {
-      $('.username-results').append("<a href='mailto:" + response.email + "'>Email " + username + "</a>");
-    }
-    $('.username-results').append('<strong><p>Followers: </strong>' + response.followers + '</p><br>');
   }).fail(function(error){
     console.log(error.responseJSON.message);
   });
