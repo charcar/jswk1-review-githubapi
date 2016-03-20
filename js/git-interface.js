@@ -19,9 +19,9 @@ exports.getRepos = function(){
   $.get('https://api.github.com/users/' + username + '/repos?access_token=' + apiKey + '&per_page=1000&sort=created').then(function(repos){
     console.log(repos);
     console.log(repos.length);
-    $('.repo-results').append("<tr><th>Repository</th><th>Description</th><th>Date Created</th></tr>");
+    $('.repo-results').append("<tr><th>Repository</th><th>Description</th></tr>");
     for(var i = 0; i < repos.length ; i++) {
-      $('.repo-results').append("<tr><td><a href='https://github.com/" + username + "/" + repos[i].name + "'>" + repos[i].name + "</a></td><td>" + repos[i].description + "</td><td>" + moment(repos[i].created_at).format('L') + "</td></tr>");
+      $('.repo-results').append("<tr><td><a href='https://github.com/" + username + "/" + repos[i].name + "'>" + repos[i].name + "</a></td><td>" + repos[i].description + "</td><td></tr>");
     };
   }).fail(function(error){
     console.log(error.responseJSON.message);
