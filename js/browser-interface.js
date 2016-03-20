@@ -3,7 +3,7 @@ var getUsername = require('./../js/git-interface.js').getUsername;
 var getRepos = require('./../js/git-interface.js').getRepos;
 
 $(document).ready(function() {
- $('#find-git').submit(function(event) {
+ $('#grabRepo').submit(function(event) {
    event.preventDefault();
    getUsername();
    getRepos();
